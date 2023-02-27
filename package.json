@@ -1,6 +1,6 @@
 {
   "name": "ajs-homeworks-async",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "two tasks about Promises and async/await",
   "main": "index.js",
   "scripts": {

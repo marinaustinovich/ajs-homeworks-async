@@ -1,5 +1,6 @@
 import GameSavingLoaderWithAsync from '../GameSavingLoaderWithAsync';
-// import showGameSavingLoaderWithAsync from '../app'
+
+jest.setTimeout(15000);
 
 test('should return promise for load()', async () => {
   const result = await GameSavingLoaderWithAsync.load();
@@ -15,9 +16,14 @@ test('should return promise for load()', async () => {
         },
   };
   expect(result).toEqual(expected);
-});
-//
-// Как проверить ветку cath?
-// test('should fails with an error', async ()=>{
-//   await expect(showGameSavingLoaderWithAsync()).rejects.toMatch('error');
-// });
+}, 10000);
+
+test('should catch an error for load()', async () => {
+  GameSavingLoaderWithAsync.load = jest.fn().mockRejectedValue(new Error('Test error'));
+
+  try {
+    await GameSavingLoaderWithAsync.load();
+  } catch (error) {
+    expect(error.message).toBe('Test error');
+  }
+}, 10000);

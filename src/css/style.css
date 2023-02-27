@@ -1,16 +1,8 @@
 .colorful {
-  width: 250px;
-  height: 20px;
+  background-color: #7f7f7f;
 }
 
-.healthy {
-  background-color: green;
-}
-
-.wounded {
-  background-color: yellow;
-}
-
-.critical {
-  background-color: red;
+h1 {
+  font-size: 48px;
+  text-decoration: #440044;
 }
