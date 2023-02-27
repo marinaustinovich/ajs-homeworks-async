@@ -1,2 +1,2 @@
 # ajs-homeworks-async
-two tasks about Promises and async/await
+three tasks about Promises and async/await
